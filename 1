@@ -1,0 +1,62 @@
+#1 задание
+n, k = int(input()), int(input())
+c = k//n
+print(c, k - (n*c), sep = '\n')
+
+# 2
+a = int(input())
+a1 = str(a//100)
+a2 = str(a // 10 % 10)
+a3 = str(a % 10)
+print(a1+a2+a3, a1+a3+a2, a2+a1+a3, a2+a3+a2, a3+a1+a2, a3+a2+a1, sep = '\n')
+
+
+# 3
+a, b, c = int(input()), int(input()), int(input())
+s = a + b + c
+h = s // 60
+m = (s % 60)
+print(10+h, ':', m, sep = '')
+
+
+# 4
+a, b = input(), input()
+if a == b:
+    print('Пароль пинят!')
+else:
+    print('Пароль не принят! Введённые пароли не совпадают!')
+
+
+# 5
+a, b = int(input()), int(input())
+if a > b:
+    print(a, '- наибольшее число')
+    print(b, '- наименьшее число')
+else:
+    print(b, '- наибольшее число')
+    print(a, '- наименьшее число')
+
+
+# 6
+a = int(input())
+if a < 18:
+    print('Доступ запрещен')
+else:
+    print('Доступ разрешен')
+
+
+# 7
+a = input()
+print(max(a))
+
+
+# 8
+cnt = 0
+s = 0
+for i in range(4):
+    a = int(input())
+    if a % 2 != 0:
+        cnt += 1
+        s += a
+print('количество нечетных:', cnt)
+print('сумма нечетных:', s)
