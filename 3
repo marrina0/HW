@@ -1,0 +1,25 @@
+#1
+a = int(input())
+for i in range(1, 11):
+    print(a, '*', i, '=', a*i)
+
+#2
+n = int(input('Задайте количество чисел:>>>'))
+cnt = 0
+for i in range(n):
+    p = int(input('Введите число:>>>'))
+    cnt += p
+print('Сумма чисел:', cnt)
+
+#3
+n = input()
+while n != 'PRINT':
+    print('id'+n)
+    n = input()
+
+#4
+n, s = float(input('Введите два числа:')), float(input())
+while n and s != 0:
+    print(n+s, n-s, n*s, n/s, sep = '\n')
+    n, s = float(input('Введите два числа:')), float(input())
+
