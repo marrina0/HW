@@ -1,0 +1,50 @@
+#1
+a, b, n = int(input()), int(input()), int(input())
+for i in range(n, 0, -1):
+    if a <= i <= b:
+        continue
+    if i % 2 != 0:
+       print(i)
+
+#2
+from math import log, sin, cos, tan, radians
+a = input('введите команду')
+while a != 'конец':
+    if a == 'Лого':
+        j = input('ведите строку')
+        l = len(j)
+        print(log(l))
+    elif a == 'Триго':
+        ch = float(input('введите положительное число'))
+        d = radians(ch)
+        print(sin(d), cos(d), tan(d), 1 / tan(d))
+    elif a == 'конец':
+        break
+
+#3
+from random import randint
+n = int(input())
+if n in randint(0, 1001):
+    print('Lucky!')
+else:
+    print('Try again!')
+
+#4
+from random import randint
+from math import log
+a, b = int(input()), int(input())
+m = randint(a, b)
+for i in range(1, m+1):
+    print(log(i, 10))
+an = input('желаете продолжить? y/n')
+if an == 'y':
+    a, b = int(input()), int(input())
+
+
+#5
+from math import pi
+n = int(input())
+for i in range(1, n+1):
+    if i % 5 != 0:
+        print('длина окружности c радиусом', i, 2*pi*n, end = '\n')
+        print('площадь круга с радиусом', i, pi*(n**2))
