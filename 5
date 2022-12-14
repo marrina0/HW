@@ -1,0 +1,46 @@
+#1
+n = int(input())
+x = []
+for i in range(n):
+    x.append(input())
+k = int(input())
+for i in x:
+    if k <= len(i):
+        print(i[k-1], end = '')
+
+#2
+a = input()
+d = len(a)
+print(d, a[1], a[-1], reversed(a), sep = '\n')
+for x in range(d, 2):
+    print(''.join(a[x]))
+for i in range(d+1, 2):
+    print(''.join(a[i]))
+
+#3
+a = input()
+d = len(a)
+cnt = 0
+if a.isdigit():
+    for i in range(d):
+        print(a[i]*2)
+if not a.isdigit():
+    for x in range(d):
+        if a[x] == 'q' or 'Q':
+            cnt += 1
+    print(cnt)
+    for j in range(d):
+        if any(k in '.,;:!_*-=()\/#%$@^&' for k in a):
+            print(a[j])
+
+
+#4
+a = input('задайте строку:')
+while a.upper().lower() != 'stop':
+    if a.isalpha():
+        print('буквенная строка')
+    elif a.isdigit():
+        print('цифровая строка')
+    else:
+        print('смешанная строка')
+    a = input('задайте строку')
