@@ -1,0 +1,35 @@
+#1
+from random import randint
+n = int(input('задайте размер списка'))
+a, b = int(input('задайте начало диапазона')), int(input('задайте конец диапазона'))
+s = []
+for i in range(n):
+    s = s.append(randint(a, b))
+print(s, len(s), max(s), min(s), s.sort(), s.sort(reverse=True))
+
+
+#2
+from random import uniform
+n = int(input())
+s = []
+w = []
+cnt1 = 0
+cnt0 = 0
+for i in range(n):
+    s = s.append(int(uniform(0, 2)))
+    if s[i] == 0:
+        w = w.append(i)
+        cnt0 += 1
+    if s[i] == 1:
+        cnt1 += 1
+print(s, cnt0, cnt1, w)
+
+#3
+from random import uniform
+n = int(input())
+s = []
+for i in range(n):
+    s = s.append(int(uniform(0, 10)))
+s = s.remove(n)
+print(s)
+    
