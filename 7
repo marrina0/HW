@@ -1,0 +1,37 @@
+#1
+n = int(input())
+file = open('newfile.txt', 'w+')
+while n != 0:
+    for i in range(1000, 10000):
+        file.write(str(i))
+        n -= 1
+file.close()
+
+#2
+from math import log, sin
+a, b, h = int(input()), int(input()), int(input())
+file = open('newfile.txt', 'w+')
+for x in range(a, b+1, h):
+    y = (x*log(1+(sin(x)/x)))/(x + sin(x))
+    file.write(str(y))
+file.close()
+
+#3
+from random import randint
+file = open('newfile.txt', 'w+')
+file.write('бебра инжир асцендент монополия')
+with open('newfile.txt', 'w+') as file:
+    j = file.readlines()
+    w1 = j[0]
+    w2 = ''
+    w3 = ''
+    while True:
+        w2 = j[randint(1, len(j) - 1)]
+        if w2 != w1:
+            break
+    while True:
+        w3 = j[randint(1, len(j) - 1)]
+        if w3 != w1 and w3 != w2:
+            break
+    print('I recieve', w2)
+    print('You receive', w3)
